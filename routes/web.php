@@ -12,7 +12,7 @@ Route::get('/study_sections', function () {
 });
 */
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 Route::get('/studysection', 'StudySectionController@index');
 Route::get('/studysection/create', 'StudySectionController@create');

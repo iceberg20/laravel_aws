@@ -16,14 +16,19 @@ class Config extends Controller
         $id = auth()->id();
         $user = User::where('id',$id)->first();
         $user->daily_goal = request('hours');
+        $current = $user->daily_goal;
         $user->save();
      
-        return view('config')->whith("added","oi");
+        return view('config', compact('current'));
     }
 
     public function index()
     {
-        return view('config');
+        $id = auth()->id();
+        $user = User::where('id',$id)->first();
+        $current = $user->daily_goal;
+
+        return view('config', compact('current'));
     }
 
     /**

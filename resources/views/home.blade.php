@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading"></div>
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -14,7 +14,12 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <p>You are logged in!</p>
+                    
+                    Click <a href="{{ route('all') }}">here</a> to view all yours study secions!
+                    </br>
+                    Or
+                    <p>Click <a href="{{ route('create') }}">here</a> to create a new study secions!</p>
                 </div>
             </div>
         </div>

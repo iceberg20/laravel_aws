@@ -21,8 +21,6 @@
   </div>
   <div class="form-group">
         <p>Date: <input type="date" id="date" class="form-control" name="s_date" ></p>
-        <input id="check_box_date" type="checkbox" name="today" value="Today">
-        <label for="check_box_date"> Today </label>
   </div>
   <div class="form-group">
     <button type="submit" class="btn btn-primary">Submit</button>

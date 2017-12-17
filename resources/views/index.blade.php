@@ -53,7 +53,8 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#team">Team</a></li>          
-          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="{{ route('home') }}">Login</a></li>
+          <li><a href="{{ route('register') }}">Sign in</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>

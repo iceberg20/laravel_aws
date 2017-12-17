@@ -14,14 +14,15 @@ Route::get('/study_sections', function () {
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/studysection', 'StudySectionController@index');
-Route::get('/studysection/create', 'StudySectionController@create');
+Route::get('/studysection', 'StudySectionController@index')->name("all");
+Route::get('/studysection/create', 'StudySectionController@create')->name("create");
 Route::post('/studysections', 'StudySectionController@store');
 Route::get('/studysection/{studysection}', 'StudySectionController@show');
 Route::post('/studysection/{studysection}/goals','GoalsController@store');
 
 Route::get('/config', 'Config@index');
 Route::post('/config/set_daily_goal', 'Config@set_daily_goal');
+
 
 Auth::routes();
 

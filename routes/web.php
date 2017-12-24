@@ -23,6 +23,7 @@ Route::post('/studysection/{studysection}/goals','GoalsController@store');
 Route::get('/config', 'Config@index');
 Route::post('/config/set_daily_goal', 'Config@set_daily_goal');
 
+Route::get('/report', 'Report@view_daily_goal');
 
 Auth::routes();
 

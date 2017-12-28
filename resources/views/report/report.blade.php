@@ -2,17 +2,22 @@
 
 
 @section('content')
-<h2> Report </h2>
-
-
-Your Daily goal: {{ $text_goal }}
+<h3> Report </h3>
 
 <?php 
 	isset($set_config) || $set_config = '0';
 ?>
-@if($set_config)
-<a href="/config">here.</a>
+
+@if($goal_configured)
+	Your Daily goal: {{ $text_goal }}	
+@else
+	Please set your daily goal <a href="/config">here.</a>
 @endif
+
+
+<br>
+<br>
+<h3> Hours studied </h3>
 
 
 @endsection

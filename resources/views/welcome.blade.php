@@ -95,7 +95,8 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Study Manager
+                    {{ trans('messages.sm') }}
+                    sad
                 </div>
 
                 <div class="subtitle">

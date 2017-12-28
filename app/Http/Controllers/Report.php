@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use DB;
 
 class Report extends Controller
 {
@@ -12,10 +13,24 @@ class Report extends Controller
     }
 
     public function reports(){
+
         $text_goal = $this->view_daily_goal();
         $goal_configured = $this->has_goal_config();
+        $today_time = $this->study_time()->first()->minutes;
 
-        return view('report/report',compact('text_goal', 'goal_configured'));
+        return view('report/report',compact('text_goal', 'goal_configured', 'today_time'));
+    }
+    
+    public function view_daily_goal()
+    {
+        $goal = $this->get_goal();
+        $text_goal = "0";
+        if( $this->has_goal_config() ){
+            $text_goal = (string)$goal;
+            $text_goal = $text_goal."h";
+        }
+
+        return $text_goal;
     }
 
     public function get_goal(){
@@ -36,24 +51,13 @@ class Report extends Controller
         }
         return $output;
     }
-    
-    public function view_daily_goal()
-    {
-        $goal = $this->get_goal();
-        $text_goal = "0";
-        if( $this->has_goal_config() ){
-            $text_goal = (string)$goal;
-            $text_goal = $text_goal."h";
-        }
-
-        return $text_goal;
-    }
 
     public function study_time() {
-     	$time = DB::table('studysections')
-                ->selectRaw('select sum(minutes) as Horas
-        from Study_section where s_date = curdate()')
-                ->get();
-        dd($time);
+      $time = DB::table('studysections')   
+            ->select(DB::raw("SUM(minutes) as minutes"))             
+            ->whereDate('s_date', '2017-12-28')
+            ->get();
+
+        return $time;
     }
 }

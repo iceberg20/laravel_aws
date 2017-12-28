@@ -15,9 +15,10 @@
 @endif
 
 
-<br>
-<br>
+</br>
+</br>
 <h3> Hours studied </h3>
 
+You studied {{ $today_time }} minutes  today!
 
 @endsection

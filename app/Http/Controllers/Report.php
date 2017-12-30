@@ -53,9 +53,12 @@ class Report extends Controller
     }
 
     public function study_time() {
-      $time = DB::table('studysections')   
+      $id = auth()->id();
+      $time = DB::table('studysections') 
+
             ->select(DB::raw("SUM(minutes) as minutes"))             
             ->whereDate('s_date', '2017-12-28')
+            ->where('user_id', '=', $id )
             ->get();
 
         return $time;

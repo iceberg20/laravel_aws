@@ -6,7 +6,8 @@
 				<th> Subject </th>
 				<th> Description</th> 
 				<th> Minutes</th>
-				<th> Date </th>  
+				<th> Date </th>
+				<th> Time </th>  
 			</tr>
 		</thead>
 		<tbody>
@@ -17,7 +18,8 @@
 				<td>{{$section->subject}}</td>
 				<td>{{$section->description}}</td>
 				<td>{{$section->minutes}}</td>
-				<td>{{$section->s_date}}</td>				
+				<td>{{$section->s_date}}</td>
+				<td>{{$section->time}}</td>				
 			<tr/>				
 		@endforeach
 			</tbody>

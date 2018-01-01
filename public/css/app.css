@@ -16,6 +16,15 @@ body {
 
 tr:hover {background-color: #d6e8ff;}
 
+#text_hours{
+  display: inline;
+  width: auto;
+}
+#text_minutes{
+  display: inline;
+  width: auto;
+}
+
 
 
 h1,

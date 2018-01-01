@@ -16,9 +16,14 @@ class Report extends Controller
 
         $text_goal = $this->view_daily_goal();
         $goal_configured = $this->has_goal_config();
-        $today_time = $this->study_time()->first()->minutes;
+        $today_time_text = $this->study_time()->first()->minutes;
+        if($today_time_text == null)
+            $today_time_text = "You did not study today!";
+        else
+            $today_time_text = "You studied ".$today_time_text." minutes  today!";
+        
 
-        return view('report/report',compact('text_goal', 'goal_configured', 'today_time'));
+        return view('report/report',compact('text_goal', 'goal_configured', 'today_time_text'));
     }
     
     public function view_daily_goal()
@@ -54,12 +59,14 @@ class Report extends Controller
 
     public function study_time() {
       $id = auth()->id();
+      $today = date('Y-m-d');
       $time = DB::table('studysections') 
 
             ->select(DB::raw("SUM(minutes) as minutes"))             
-            ->whereDate('s_date', '2017-12-28')
+            ->whereDate('s_date', $today)
             ->where('user_id', '=', $id )
             ->get();
+
 
         return $time;
     }

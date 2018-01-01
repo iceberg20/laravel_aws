@@ -16,6 +16,9 @@ class StudySectionController extends Controller
     public function index(){
         $id = auth()->id();        
     	$s_sections = Studysection::where('user_id', $id)->get();
+        foreach($s_sections as $section){
+            $section->time = substr($section->time,11);             
+        }
 
     	return view('studysection.index', compact('s_sections'));
     }

@@ -19,6 +19,6 @@
 </br>
 <h3> Hours studied </h3>
 
-You studied {{ $today_time }} minutes  today!
+{{ $today_time_text }}
 
 @endsection

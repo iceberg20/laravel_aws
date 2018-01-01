@@ -16,8 +16,10 @@
     <input type="text" class="form-control" id="description" name="description" >
   </div>
   <div class="form-group">
+    <label for="minutes">Hours</label>
+    <input type="text" class="form-control" id="text_hours" name="minutes" >
     <label for="minutes">Minutes</label>
-    <input type="text" class="form-control" id="minutes" name="minutes" >
+    <input type="text" class="form-control" id="text_minutes" name="minutes" >
   </div>
   <div class="form-group">
         <p>Date: <input type="date" id="date" class="form-control" name="s_date" ></p>

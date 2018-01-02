@@ -15,7 +15,8 @@ class StudySectionController extends Controller
 
     public function index(){
         $id = auth()->id();        
-    	$s_sections = Studysection::where('user_id', $id)->get();
+    	$s_sections = Studysection::where('user_id', $id)
+                ->orderBy('id', 'description')->get();
         foreach($s_sections as $section){
             $section->time = substr($section->time,11);             
         }
@@ -37,13 +38,21 @@ class StudySectionController extends Controller
         $this->validate(request(),[
             'subject' => 'required',
             'description' => 'required',
-            'minutes' => 'required',
+            'time' => 'required',
             's_date' => 'required'
             ]);
 
+        $time = request('time'); 
+        $hour = substr($time,0,2);
+        $h = (int) $hour;
+        $h = $h*60;
+        $minutes = substr($time,-2);
+        $m = (int) $minutes;
+        $total = $m+$h;
+        
         Studysection::create(['subject' => request('subject'), 
                               'description' => request('description'),
-                                     'minutes' => request('minutes'), 
+                                     'minutes' => $total, 
                                      's_date' => request('s_date'),
                                      'user_id' => auth()->id()
                                      ]);
@@ -51,4 +60,6 @@ class StudySectionController extends Controller
 
         return redirect('/studysection');
     }
+
+
 }

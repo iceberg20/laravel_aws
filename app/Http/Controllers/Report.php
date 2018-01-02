@@ -14,13 +14,14 @@ class Report extends Controller
 
     public function reports(){
 
+        //dd($this->min_to_time(120));
         $text_goal = $this->view_daily_goal();
         $goal_configured = $this->has_goal_config();
         $today_time_text = $this->study_time()->first()->minutes;
         if($today_time_text == null)
-            $today_time_text = "You did not study today!";
+            $today_time_text = "not";
         else
-            $today_time_text = "You studied ".$today_time_text." minutes  today!";
+            $today_time_text = $this->min_to_time($today_time_text);
         
 
         return view('report/report',compact('text_goal', 'goal_configured', 'today_time_text'));
@@ -61,13 +62,32 @@ class Report extends Controller
       $id = auth()->id();
       $today = date('Y-m-d');
       $time = DB::table('studysections') 
-
             ->select(DB::raw("SUM(minutes) as minutes"))             
             ->whereDate('s_date', $today)
             ->where('user_id', '=', $id )
             ->get();
 
-
+            //dd($today);
         return $time;
+    }
+
+    private function min_to_time($min){
+    $min = (integer) $min;
+    $minutos = "";
+    $horas = "";
+    if($min >= 60){
+        $h = floor($min/60);
+        $r = $min%60;
+        if($r>0){
+            $minutos = strval($r)."min";
+        } 
+        $horas = strval($h)."h ";
+    }
+    else {
+        $minutos = strval($min)." min";
+    }
+
+
+      return $horas.$minutos;
     }
 }

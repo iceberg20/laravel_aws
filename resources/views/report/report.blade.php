@@ -19,6 +19,10 @@
 </br>
 <h3> Hours studied </h3>
 
-{{ $today_time_text }}
+@if($today_time_text == 'not' )
+<p>You did <span style='color:red;font-weight:bold'>not</span> study today!</p>
+@else
+<p>You studied <span style='color:#07B029;font-weight:bold'> {{ $today_time_text }} </span> today!
+@endif
 
 @endsection

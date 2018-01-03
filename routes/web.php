@@ -25,6 +25,8 @@ Route::post('/config/set_daily_goal', 'Config@set_daily_goal');
 
 Route::get('/report', 'Report@reports');
 
+Route::get('/planning', 'Planning@planning');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

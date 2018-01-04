@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-      <h1 class="blog-post-title">Study Sections</h1>
+      <h3 class="section-title">Study Sections</h3>
       <p class="lead blog-description">All yours study sections.</p>
     </div>
     @include('studysection.studysection')

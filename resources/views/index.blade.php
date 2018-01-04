@@ -49,7 +49,7 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="#hero">Home</a></li>
-          <li><a href="#about">About Us</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#team">Team</a></li>          
@@ -81,27 +81,27 @@
         <div class="row about-container">
 
           <div class="col-lg-6 content order-lg-1 order-2">
-            <h2 class="title">Few Words About Us</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <h2 class="title">What is Study Maganer?</h2>
+            <p>              
+            An app that will help you to organaize and manage your studies. 
             </p>
 
             <div class="icon-box wow fadeInUp">
-              <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+              <div class="icon"><i class="fa fa-clock-o"></i></div>
+              <h4 class="title"><a href="">Register your Study Time</a></h4>
+              <p class="description">Have total controll of all your study sections.</p>
             </div>
 
             <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
-              <div class="icon"><i class="fa fa-photo"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <div class="icon"><i class="fa fa-line-chart"></i></div>
+              <h4 class="title"><a href="">Learn faster</a></h4>
+              <p class="description">With a precise study plan you will learn more efficiently.</p>
             </div>
 
             <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
               <div class="icon"><i class="fa fa-bar-chart"></i></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <h4 class="title"><a href="">Define Goals</a></h4>
+              <p class="description">Define and track your goal.</p>
             </div>
 
           </div>
@@ -453,7 +453,7 @@
         </div>
       </div>
 
-      <div id="google-map" data-latitude="40.713732" data-longitude="-74.0092704"></div>
+      <div id="google-map" data-latitude="-5.8948523" data-longitude="-35.2002851"></div>
 
       <div class="container wow fadeInUp">
         <div class="row justify-content-center">
@@ -463,17 +463,17 @@
             <div class="info">
               <div>
                 <i class="fa fa-map-marker"></i>
-                <p>A108 Adam Street<br>New York, NY 535022</p>
+                <p>Av. Ayrton Senna<br>Natal, RN</p>
               </div>
 
               <div>
                 <i class="fa fa-envelope"></i>
-                <p>info@example.com</p>
+                <p>italoberg@yahoo.com</p>
               </div>
 
               <div>
                 <i class="fa fa-phone"></i>
-                <p>+1 5589 55488 55s</p>
+                <p>+55 (84)98164690</p>
               </div>
             </div>
 
@@ -554,7 +554,7 @@
   <script src="/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="/lib/easing/easing.min.js"></script>
   <script src="/lib/wow/wow.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUJadpVQDjbsEUTLDq-2ov9jzrlrqEq7I"></script>
 
   <script src="/lib/waypoints/waypoints.min.js"></script>
   <script src="/lib/counterup/counterup.min.js"></script>
@@ -566,6 +566,19 @@
 
   <!-- Template Main Javascript File -->
   <script src="/js/main.js"></script>
+  <script>
+    function initMap() {
+    var uluru = {lat: -5.8948523, lng: -35.2002851};
+    var map = new google.maps.Map(document.getElementById('google-map'), {
+      zoom: 4,
+      center: uluru
+    });
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+  </script>
+}
 
 </body>
 </html>

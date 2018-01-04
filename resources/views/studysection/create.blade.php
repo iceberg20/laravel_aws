@@ -2,7 +2,7 @@
 
 @section('content')
 
-	<h1> Register your Study Section </h1>
+	<h3> Register your Study Section </h3>
   <hr>
 
 	<form method="Post" action="/studysections">

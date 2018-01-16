@@ -101,7 +101,7 @@
             <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
               <div class="icon"><i class="fa fa-bar-chart"></i></div>
               <h4 class="title"><a href="">Define Goals</a></h4>
-              <p class="description">Define and track your goal.</p>
+              <p class="description">Define and track your goals.</p>
             </div>
 
           </div>

@@ -9,11 +9,13 @@
   <div class="form-group">
     <label for="subject">Hours</label>
     <input type="text" class="form-control" id="hours" name="hours" 
-    placeholder="Current {{ $current }} h" >
+    placeholder="Current {{ $current }} h" required >
   </div>
   <div class="form-group">
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" onclick="myFunction()">Submit</button>
   </div>
+
+  <script type="text/javascript" src="{{ URL::asset('js/config_validate_form.js') }}"></script>
 
   @include('layouts.errors')
 

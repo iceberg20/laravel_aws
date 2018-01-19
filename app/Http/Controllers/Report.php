@@ -12,6 +12,10 @@ class Report extends Controller
         $this->middleware('auth');
     }
 
+    public function time_to_reach_goal(){
+        
+    }
+
     public function reports(){
 
         //dd($this->min_to_time(120));

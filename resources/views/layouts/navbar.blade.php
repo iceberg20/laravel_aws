@@ -4,7 +4,6 @@
       <a class="nav-link active" href="/studysection">View All</a>
       <a class="nav-link" href="/studysection/create">Create</a>
       <a class="nav-link" href="/report">Report</a>
-      <a class="nav-link" href="/planning">Planning</a>
       <a class="nav-link" href="/config">Config</a>
       
       <form class="form-inline my-2 my-lg-0 ml-auto" action="{{ route('logout') }}" method="POST">

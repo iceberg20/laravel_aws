@@ -1,4 +1,4 @@
-    function myFunction() {
+    function validadte() {
         var x;
         x = document.getElementById("hours").value;
 

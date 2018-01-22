@@ -12,7 +12,7 @@
     placeholder="Current {{ $current }} h" required >
   </div>
   <div class="form-group">
-    <button type="submit" class="btn btn-primary" onclick="validadte()">Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
   </div>
 </form>
   
@@ -20,7 +20,7 @@
 
 <script type="text/javascript" src="{{ URL::asset('js/config_validate_form.js') }}"></script>
 
-  @include('layouts.errors')
+@include('layouts.errors')
 
 
 @endsection

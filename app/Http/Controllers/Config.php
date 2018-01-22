@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Rules\ValidHour;
 
 class Config extends Controller
 {
@@ -17,6 +18,10 @@ class Config extends Controller
      * @return \Illuminate\Http\Response
      */
     public function set_daily_goal(){
+
+        $this->validate(request(),[
+            'hours' => ['required','numeric', new ValidHour]
+            ]);
         $id = auth()->id();
         $user = User::where('id',$id)->first();
         $user->daily_goal = request('hours');

@@ -271,6 +271,8 @@
 
     <div class="container">
       <div class="copyright">
+                <p>Av. Ayrton Senna | Nova Parnamirim | CEP 59.151-900 | Parnamirim/RN | Tel: +55 (84) 98164.6390</p>
+
         &copy; Copyright <strong>Regna</strong>. All Rights Reserved
       </div>
       <div class="credits">

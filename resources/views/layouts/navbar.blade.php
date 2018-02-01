@@ -1,8 +1,14 @@
   <div class="container">
+
+  @include('studysection.start_section_modal')
+
+
+</div>
     <nav class="nav">
       <a class="nav-link" href="/">Home</a>
       <a class="nav-link active" href="/studysection">View All</a>
       <a class="nav-link" href="/studysection/create">Create</a>
+      <a class="nav-link" id="myBtn" href="#">Start</a>
       <a class="nav-link" href="/report">Report</a>
       <a class="nav-link" href="/config">Config</a>
       
@@ -20,3 +26,6 @@
 	</form>
     </nav>
   </div>
+
+    <!-- Start study section Modal JS -->
+    <script src="/js/start_study_section.js"></script>    

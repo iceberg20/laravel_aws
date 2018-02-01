@@ -1,16 +1,5 @@
 <?php
 
-/*
-Route::get('/', function () {
-	$s_sections = DB::table('studysections')->get();
-    return view('welcome', compact('s_sections'));
-});
-
-Route::get('/study_sections', function () {
-	$s_sections = DB::table('studysections')->get();
-    return view('study_sections', compact('s_sections'));
-});
-*/
 Route::get('/', function () {
     return view('index');
 });

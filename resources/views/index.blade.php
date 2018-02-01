@@ -21,7 +21,7 @@
   <link href="/css/lib/animate/animate.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
-  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/index.css" rel="stylesheet">
 
   <!-- =======================================================
     Theme Name: Regna

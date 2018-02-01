@@ -27,19 +27,15 @@
     
     <!-- Custom styles for this template -->
     <link href="/css/app.css" rel="stylesheet">
-    
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
 
-        <!-- DatePicker -->
+    <!-- Start study section Modal CSS -->
+    <link href="/css/start_section_modal.css" rel="stylesheet">
+   
+    <!-- DatePicker -->
     <script>
-    $( function() {
-      $( "#datepicker" ).datepicker();
-    } );
+      $( function() {
+        $( "#datepicker" ).datepicker();
+      } );
     </script>
 
   </head>
@@ -60,6 +56,7 @@
         <div class="col-sm-8 blog-main">
 
           <div class="blog-post">
+
             @yield('content')
             @yield('show')
           </div><!-- /.blog-post -->

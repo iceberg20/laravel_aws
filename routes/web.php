@@ -20,6 +20,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::post('/search', 'StudySectionController@search_subject');
+
+
+
 //Route::get('/register', 'RegistrationController@create');
 //Route::post('/register', 'RegistrationController@store')->name('register');
 

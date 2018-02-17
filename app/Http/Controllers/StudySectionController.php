@@ -61,5 +61,18 @@ class StudySectionController extends Controller
         return redirect('/studysection');
     }
 
+    public function search_subject(Request $request){
+        $id = auth()->id();        
+        $subject = $request->input("subject");        
+        $s_sections = Studysection::where([
+                                            ['user_id', $id],
+                                            ['subject', $subject ]
+                                          ])
+                ->orderBy('id', 'description')->get();
+        foreach($s_sections as $section){
+            $section->time = substr($section->time,11);             
+        }
 
+        return view('studysection.index', compact('s_sections'));
+    }
 }
